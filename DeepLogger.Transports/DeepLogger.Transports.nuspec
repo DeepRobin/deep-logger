@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Robin Lindner</authors>
+    <owners>Robin Lindner</owners>
+    <licenseUrl>https://github.com/DeepRobin/deep-logger/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://github.com/DeepRobin/deep-logger/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The transports of DeepLogger</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Transports Logger DeepLogger</tags>
+  </metadata>
+</package>

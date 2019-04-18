@@ -1,4 +1,6 @@
-﻿namespace DeepLogger
+﻿using DeepLogger.Core;
+
+namespace DeepLogger
 {
     /// <summary>
     /// The logging options for the Logger

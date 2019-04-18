@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DeepLogger.Transports</RootNamespace>
     <AssemblyName>DeepLogger.Transports</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,7 +35,7 @@
     <DocumentationFile>bin\Release\DeepLogger.Transports.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>certificate.pfx</AssemblyOriginatorKeyFile>
@@ -50,10 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionTransport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StreamTransport.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DeepLogger.Core\DeepLogger.Core.csproj">
+      <Project>{3df38fd3-5f65-462a-85b9-c49616c77a4c}</Project>
+      <Name>DeepLogger.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DeepLogger\DeepLogger.csproj">
       <Project>{dc8157df-d52a-4a81-92e8-f79eaf14fb72}</Project>
       <Name>DeepLogger</Name>

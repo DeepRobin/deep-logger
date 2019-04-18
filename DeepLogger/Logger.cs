@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using DeepLogger.Core;
+using System.Collections.Generic;
 
 namespace DeepLogger
 {
@@ -61,7 +62,7 @@ namespace DeepLogger
         /// <seealso cref="Log(LogLevel, string)"/>
         /// </summary>
         /// <param name="message">The message</param>
-        public void Warning(string message) => Log(LogLevel.Warning, message);
+        public void Warn(string message) => Log(LogLevel.Warning, message);
 
         /// <summary>
         /// Logs a message using the error log level

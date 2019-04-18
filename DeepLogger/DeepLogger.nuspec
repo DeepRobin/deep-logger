@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Robin Lindner</authors>
+    <owners>Robin Lindner</owners>
+    <licenseUrl>https://github.com/DeepRobin/deep-logger/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/DeepRobin/deep-logger</projectUrl>
+    <description>DeepLogger. It is deep here. But it works very good.</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Logger DeepLogger DeepRobin Logging Framework</tags>
+  </metadata>
+</package>

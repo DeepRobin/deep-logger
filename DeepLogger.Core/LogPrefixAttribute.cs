@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DeepLogger
+namespace DeepLogger.Core
 {
     /// <summary>
     /// Attribute for the log prefix of a log level
@@ -22,6 +22,5 @@ namespace DeepLogger
         {
             Value = value;
         }
-
     }
 }

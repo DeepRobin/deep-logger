@@ -1,4 +1,4 @@
-﻿namespace DeepLogger
+﻿namespace DeepLogger.Core
 {
     /// <summary>
     /// The log level
@@ -28,6 +28,5 @@
         /// </summary>
         [LogPrefix("ERROR")]
         Error = 0x3,
-        
     }
 }

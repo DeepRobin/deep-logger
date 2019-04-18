@@ -1,13 +1,14 @@
-﻿using System;
+﻿using DeepLogger.Core;
+using System;
 
 namespace DeepLogger
 {
     /// <summary>
     /// The log event handler
     /// </summary>
-    /// <param name="source">The source object</param>
-    /// <param name="args">The detailed information of the log entry</param>
-    public delegate void LogEventHandler(object source, LogEventArgs args);
+    /// <param name="sender">The source object</param>
+    /// <param name="e">The detailed information of the log entry</param>
+    public delegate void LogEventHandler(object sender, LogEventArgs e);
 
     /// <summary>
     /// Event Args for LogEvent

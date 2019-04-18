@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
@@ -56,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DeepLogger.Core\DeepLogger.Core.csproj">
+      <Project>{3DF38FD3-5F65-462A-85B9-C49616C77A4C}</Project>
+      <Name>DeepLogger.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DeepLogger.Transports\DeepLogger.Transports.csproj">
       <Project>{18a27aa8-454e-42b7-bdf0-356a806f69b7}</Project>
       <Name>DeepLogger.Transports</Name>

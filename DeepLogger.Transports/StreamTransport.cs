@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeepLogger.Core;
+using System;
 using System.IO;
 using System.Linq;
 
@@ -28,8 +29,8 @@ namespace DeepLogger.Transports
         /// <summary>
         /// The constructor of StreamTransports using 2 writers
         /// </summary>
-        /// <param name="outWriter">The writer to write logs with all log levels instead of Error. <seealso cref="LogLevel"/></param>
-        /// <param name="errorWriter">The writer to write logs with the log level Error. <seealso cref="LogLevel"/></param>
+        /// <param name="outWriter">The writer to write logs with all log levels instead of Error. <seealso cref="Core.LogLevel"/></param>
+        /// <param name="errorWriter">The writer to write logs with the log level Error. <seealso cref="Core.LogLevel"/></param>
         public StreamTransport(TextWriter outWriter, TextWriter errorWriter)
         {
             this.outWriter = outWriter;
@@ -44,19 +45,10 @@ namespace DeepLogger.Transports
         public void Log(LogLevel level, string message)
         {
             message = string.Format(Format, GetAttribute<LogPrefixAttribute>(level), message);
-            switch (level)
-            {
-                case LogLevel.Error:
-                    errorWriter.WriteLine(message);
-                    break;
-
-                case LogLevel.Info:
-                case LogLevel.Verbose:
-                case LogLevel.Warning:
-                default:
-                    outWriter.WriteLine(message);
-                    break;
-            }
+            if (level == LogLevel.Error)
+                errorWriter.WriteLine(message);
+            else
+                outWriter.WriteLine(message);
         }
 
         private TAttribute GetAttribute<TAttribute>(Enum value)
